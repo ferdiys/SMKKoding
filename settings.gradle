@@ -1,0 +1,2 @@
+rootProject.name='SMKKoding'
+include ':app'
