@@ -3,6 +3,8 @@ package com.example.smkkoding
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
@@ -69,10 +71,24 @@ class MainActivity : AppCompatActivity() {
     private fun setDataSpinnerGender() {
         val adapter = ArrayAdapter.createFromResource(
             this,
-            R.array.jenis_kelamin, android.R.layout.simple_spinner_item
+            R.array.gender, android.R.layout.simple_spinner_item
         )
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner_gender.adapter = adapter
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.about, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
+        R.id.action_about -> {
+            val intent = Intent(this, MeActivity::class.java)
+            startActivity(intent)
+            true
+        }
+        else -> super.onOptionsItemSelected(item)
     }
 }
