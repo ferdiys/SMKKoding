@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     private var telpInput: String = ""
     private var alamatInput: String = ""
     private var genderInput: String = ""
+    private var umurInput: String = ""
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,6 +36,7 @@ class MainActivity : AppCompatActivity() {
         bundle.putString("email", emailInput)
         bundle.putString("telp", telpInput)
         bundle.putString("alamat", alamatInput)
+        bundle.putString("umur", umurInput)
         intent.putExtras(bundle)
 
         startActivity(intent)
@@ -46,6 +48,7 @@ class MainActivity : AppCompatActivity() {
         telpInput = edt_telp.text.toString()
         alamatInput = edt_address.text.toString()
         genderInput = spinner_gender.selectedItem.toString()
+        umurInput = edt_umur.text.toString()
 
         when {
             namaInput.isEmpty() -> edt_name.error = "Nama tidak boleh kosong"
@@ -56,6 +59,7 @@ class MainActivity : AppCompatActivity() {
             emailInput.isEmpty() -> edt_email.error = "Email tidak boleh kosong"
             telpInput.isEmpty() -> edt_telp.error = "Telp tidak boleh kosong"
             alamatInput.isEmpty() -> edt_address.error = "Alamat tidak boleh kosong"
+            umurInput.isEmpty() -> edt_umur.error = "Umur tidak boleh kosong"
             else -> {
                 tampilToast("Navigasi ke halaman profil")
                 goToProfilActivity()

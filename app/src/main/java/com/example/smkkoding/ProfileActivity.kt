@@ -27,11 +27,13 @@ class ProfileActivity : AppCompatActivity() {
         val email = bundle?.getString("email")
         val telp = bundle?.getString("telp")
         val alamat = bundle?.getString("alamat")
+        val umur = bundle?.getString("umur")
         tv_name.text = name
         tv_gender.text = gender
         tv_email.text = email
         tv_telp.text = telp
         tv_address.text = alamat
+        tv_umur.text = umur
     }
 
     companion object {
@@ -44,7 +46,7 @@ class ProfileActivity : AppCompatActivity() {
         intent.putExtra("name", userName)
         startActivityForResult(intent, REQUEST_CODE)
     }
-    
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == REQUEST_CODE) {
