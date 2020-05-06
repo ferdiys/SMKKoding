@@ -81,18 +81,4 @@ class MainActivity : AppCompatActivity() {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner_gender.adapter = adapter
     }
-
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.about, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
-        R.id.action_about -> {
-            val intent = Intent(this, MeActivity::class.java)
-            startActivity(intent)
-            true
-        }
-        else -> super.onOptionsItemSelected(item)
-    }
 }

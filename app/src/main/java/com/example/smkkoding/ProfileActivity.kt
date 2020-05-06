@@ -18,6 +18,10 @@ class ProfileActivity : AppCompatActivity() {
 
         btn_editName.setOnClickListener { navigateEditProfile() }
         btn_call.setOnClickListener { dialPhoneNumber(tv_telp.text.toString()) }
+        btn_me.setOnClickListener {
+            val intent = Intent(this, MeActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun ambilData() {

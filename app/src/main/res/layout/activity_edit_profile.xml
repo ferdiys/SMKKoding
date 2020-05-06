@@ -12,19 +12,23 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:gravity="center_horizontal"
-        android:text="Edit Profile"/>
+        android:text="Edit Profile" />
+
     <EditText
         android:id="@+id/edt_profileName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:hint="Nama"/>
+        android:hint="Nama" />
+
     <Button
         android:id="@+id/btn_editSave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="simpan"/>
+        android:background="@color/colorBackground"
+        android:text="simpan"
+        android:textColor="@color/colorItem" />
 
 
 </LinearLayout>

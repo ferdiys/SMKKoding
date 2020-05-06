@@ -41,8 +41,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:inputType="number"
-            android:hint="Umur"/>
+            android:hint="Umur"
+            android:inputType="number" />
 
         <EditText
             android:id="@+id/edt_email"
@@ -72,7 +72,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:text="SIMPAN" />
+            android:background="@color/colorBackground"
+            android:text="SIMPAN"
+            android:textColor="@color/colorItem" />
     </LinearLayout>
 
 </ScrollView>
